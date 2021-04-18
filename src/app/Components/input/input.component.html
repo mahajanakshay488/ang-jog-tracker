@@ -1,0 +1,31 @@
+<div class="container d-flex justify-content-center mt-3">
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="col mt-3">
+      <label for="date">Today Date</label> &nbsp;&nbsp;
+      <strong>{{todayDate | date:'fullDate'}}</strong>
+    </div>
+    
+    <div class="col mt-3">
+      <input 
+        ngModel name="km"
+        type="number" class="form-control-4" placeholder="km you cover">
+    </div>
+
+    <div class="col mt-3">
+        <input 
+            ngModel name="min"
+            type="number" class="form-control-4" placeholder="min you take">
+    </div>
+
+    <div class="col mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+  </form>
+
+</div>
+
+
+    
+

@@ -1,0 +1,35 @@
+<ul class="list-group container mt-5" style="width: 600px;">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      
+      <strong>Average Speed Per Week</strong>
+
+      <div style="width: 40%;" class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-secondary rounded-pill">distance</span>
+          <span class="badge bg-primary rounded-pill">km/h</span>
+      </div>
+
+    </li>
+    
+    <li 
+        *ngFor="let el of recordArray; let i = index"
+        class="list-group-item d-flex justify-content-between align-items-center">
+
+        <p>{{i + 1}} week</p>
+
+        <div style="width: 40%;" class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-secondary rounded-pill">{{el.distance}}</span>
+          <span class="badge bg-primary rounded-pill">{{el.averageSpeed}}</span>
+        </div>
+
+    </li>
+    <li 
+        class="list-group-item d-flex justify-content-between align-items-center">
+
+        <p>runing week..</p>
+
+       <div style="width: 40%;" class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-secondary rounded-pill">distance</span>
+          <span class="badge bg-primary rounded-pill">km/h</span>
+      </div>
+    </li>
+  </ul>
