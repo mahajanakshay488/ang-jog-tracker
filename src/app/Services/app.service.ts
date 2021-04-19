@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from "@angular/router";
 
 export interface MainObj{
   date: Date,
@@ -21,7 +22,9 @@ export class AppService {
   JogRecord: Array<Array<any>> = [[]];
   calculatedObj: CalculatedObj;
   
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
   }  
 
   onSubmit(data: MainObj){
@@ -72,9 +75,11 @@ export class AppService {
         };
 
         el.push(this.calculatedObj);
-        console.log('check');
+        this.router.navigate(['/show']);
+
+        //console.log('check');
       }
-      console.log('work');
+      //console.log('work');
     });
   }
 

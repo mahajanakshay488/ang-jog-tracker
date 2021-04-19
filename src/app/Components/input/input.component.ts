@@ -20,7 +20,9 @@ export class InputComponent implements OnInit {
 
   onSubmit(){
     let elem = this.cridentials.value;
-    elem.day = this.todayDate.getDay();
+
+    //elem.day = this.todayDate.getDay();
+    
     elem.date = this.todayDate;
     console.log(elem);
     this.appService.onSubmit(elem);

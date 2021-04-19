@@ -1,9 +1,16 @@
 <div class="container d-flex justify-content-center mt-3">
 
-  <form (ngSubmit)="onSubmit()" #form="ngForm">
-    <div class="col mt-3">
+  <form (ngSubmit)="onSubmit()" #form="ngForm"
+    class="d-flex flex-column align-items-center bg-light mt-3 p-3 rounded">
+    <!-- <div class="col text-center mt-3">
       <label for="date">Today Date</label> &nbsp;&nbsp;
-      <strong>{{todayDate | date:'fullDate'}}</strong>
+      <strong class="btn btn-secondary" >{{todayDate | date:'fullDate'}}</strong>
+    </div> -->
+
+    <div class="col mt-3">
+      <input 
+        ngModel name="day"
+        type="number" class="form-control-4" placeholder="enter day no.">
     </div>
     
     <div class="col mt-3">
@@ -24,6 +31,17 @@
 
   </form>
 
+</div>
+
+<div>
+  <h4>day no.</h4>
+ <p>Mon - 1</p> 
+ <p>Tue - 2</p> 
+ <p>Wen - 3</p> 
+ <p>Thu - 4</p> 
+ <p>Fri - 5</p> 
+ <p>Sat - 6</p> 
+ <p>Sun - 0</p> 
 </div>
 
 
